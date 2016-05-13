@@ -1,0 +1,277 @@
+<html>
+   <head>
+      <title>Prince Hemrajani</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+	   
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		 
+		
+      
+      <style>
+         .gap{
+         height:18%;
+         }
+         #subjects{
+         display:none;
+         }
+         #list1:hover
+         {
+         color:blue;
+         cursor:pointer;
+         }
+         a {
+         text-decoration:none;
+         }
+         .img-rounded{
+         -webkit-transition:width 3s;
+         }
+         .img-rounded:hover
+         {
+         width:75px;
+         }
+         #clickimg
+         {
+         -webkit-animation-name: example; /* Chrome, Safari, Opera */
+         -webkit-animation-duration: 6s; /* Chrome, Safari, Opera */
+         -webkit-animation-iteration-count: infinite;
+         }
+         @-webkit-keyframes example {
+         0%   {width:0%;height:0%}
+         50%  {width:65%;height:25%}
+         100% {width:85%;height:40%}
+         }
+      </style>
+	  
+      <script>
+	  
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();   
+    });
+    
+         function expansion() {
+             var list = document.getElementById("subjects");
+         
+             if (list.style.display == "none"){
+                 list.style.display = "block";
+             }else{
+                 list.style.display = "none";
+             }
+         }
+         function chgImage() {
+             var image = document.getElementById('mainpic');
+             if (image.src.match("profile")) {
+                 image.src = "img/trojan.png";
+             } else {
+                 image.src = "img/profile.png";
+             }
+         	var image = document.getElementById('clickimg');
+             if (image.src.match("metou")) {
+                 image.src = "img/utome.png";
+             } else {
+                 image.src = "img/metou.png";
+             }
+         }
+         function resizeWin() {
+         	var w = window.outerWidth;
+         	if(w<1800)
+             document.getElementById('clickimg').style.display = "none";
+         	else
+         	document.getElementById('clickimg').style.display = "block";
+         }
+         
+      </script>
+   </head>
+   <body id="prince" class="index"  onresize="resizeWin()">
+      
+      <nav class="navbar navbar-default navbar-fixed-top">
+         <div style="width:50px;float:right;margin-right:4%">
+            <a href="https://www.facebook.com/prince.hemrajani" data-toggle="tooltip" data-placement="bottom" data-original-title="Visit my Facebook page" > <img src="img/fb" class="img-rounded" width="40px" height="45px"></a>
+         </div>
+         <div style="width:50px;float:right;margin-right:1.5%">
+            <a href="https://www.linkedin.com/in/princehemrajani" data-toggle="tooltip" data-placement="bottom" data-original-title="Visit my linkedIn page"> <img src="img/linkedin.png" class="img-rounded" width="40px" height="45px"></a>
+         </div>
+         <div class="container">
+            
+            <div class="navbar-header page-scroll">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand" href="#prince"><b><font size="5px">Prince Hemrajani</font></b></a>
+            </div>
+            
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="hidden">
+                     <a href="#prince"></a>
+                  </li>
+                  <li class="page-scroll">
+                     <a href="#about">About</a>
+                  </li>
+                  <li class="page-scroll">
+                     <a href="#education">Education</a>
+                  </li>
+                  <li class="page-scroll">
+                     <a href="#work">Work Experience</a>
+                  </li>
+                  <li class="page-scroll">
+                     <a href="#contact">Contact</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <!-- Header -->
+      <header>
+         <div width="25%" style="float:left">
+            <img id="clickimg" src="img/metou.png" style="width:75%;height:25%;margin-top:50%;margin-left:120%"></img>
+         </div>
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-12" >
+                  <div class="row">
+                     <div class="col-lg-8" >
+                        <img class="img-responsive" id="mainpic" src="img/profile.png" alt="" onclick="chgImage()">
+                     </div>
+                     <div class="col-lg-4" style="margin-top:22%">
+                        <p class="name" style="font-weight:700;font-size:25px">Prince Hemrajani</p>
+                        <hr class="star-light">
+                        <br>
+                        <p class="skills" style="font-weight:550;font-size:23px">Graduate Student, University of Southern California</p>
+                        <hr class="star-light">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      
+      <section class="success" id="about">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-12 text-center">
+                  <div class="gap">  </div>
+                  <h2 >About</h2>
+                  <hr class="star-light">
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-lg-8 col-lg-offset-2" style="text-align:justify">
+                  Hello! I am a Masters student at University of Southern California pursuing major in Computer Science. My idea for life is to be dedicated & focussed towards my dream. I believe only dedication can lead to the path of success.
+                  </p>
+                  <p >My dedication lies in constantly working towards achieving my goal. I'm inquisitive to learn new things and about the upcoming technologies.
+                     I'm an open source enthusiast and enjoy learning more about them.
+                     As a part of the curriculum at USC I have been engaged in several projects and shall continue to do the same.
+                     Being a staunch believer in learning from all possible directions, I have been engaged in doing other interesting projects as well other than those assigned as a part of the course to learn more and more. 
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="success" id="education">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-12 text-center">
+                  <div class="gap">  </div>
+                  <h2>Education</h2>
+                  <hr class="star-light">
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-lg-8 col-lg-offset-2" style="text-align: justify">
+                  <div class="row">
+                     <div class="col-lg-6">
+                        <h3>University of Southern California</h3>
+                        <p>Master of Science (MS), Computer Science, 3.10/4.00</p>
+                        <p>2014 - To Present</p>
+                        <h4 id = "list1" onclick = "expansion()">Relavent Courses &#x25BC;</h4>
+                        <ol id="subjects">
+                           <li>Anaylysis of Algorithms</li>
+                           <li>Web technologies</li>
+                           <li>Database systems</li>
+                           <li>Foundations of Artificial Intelligence</li>
+                           <li>Specification and Design of User Interface Software</li>
+                        </ol>
+                     </div>
+                     <div class="col-lg-2" style="margin-left:5%">
+                        <img src="img/usc.png"></img>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-8 col-lg-offset-2" style="text-align: justify">
+                  <div class="row">
+                     <div class="col-lg-6">
+                        <h3>Vellore Institute of Technology</h3>
+                        <p>Bachelor of Technology (B.Tech.), Computer Science, 8.35/10</p>
+                        <p>2010 - 2014</p>
+                     </div>
+                     <div class="col-lg-2" style="margin-left:5%">
+                        <img src="img/vit.png" width="300px" height="100px"></img>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="success" id="work">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-12 text-center">
+                  <div class="gap">  </div>
+                  <h2>Work Experience</h2>
+                  <hr class="star-light">
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-lg-8 col-lg-offset-2" style="text-align: justify">
+                  <h3>Certified industrial training at Metacube Technologies Pvt. Ltd., Jaipur Rajasthan(India) </h3>
+                  <p>Duration: June, 2013 </p>
+                  <p>Project: Online College Management using ASP.NET. Here various functionalities related to a college were handled in an effective manner to ease the process for students.</p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <div class="gap">
+      </div>
+      
+      <section id="contact">
+         <div class="container">
+         <div class="row">
+            <div class="col-lg-12 text-center">
+               <div class="gap">  </div>
+               <h2>Contact Me</h2>
+               <hr class="star-primary">
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+             </div>
+         </div>
+      </section>
+      <footer class="text-center">
+         <div class="footer-above">
+            <div class="container">
+               <div class="row">
+                  <div class="footer-col col-md-4">
+                     <h3>Address</h3>
+                     <p>1226 Apt#9<br>West 30th Street, CA 90007</p>
+                  </div>
+                  <div class="footer-col col-md-4">
+                     <h3>Email ID</h3>
+                     <p>phemraja@usc.edu</p>
+                  </div>
+                  <div class="footer-col col-md-4">
+                     <h3>Mobile Number</h3>
+                     <p>(323)-715-9868</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+    	 
+   </body>
+</html>
